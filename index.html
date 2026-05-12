@@ -1,50 +1,663 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edigar Osoro | Full-Stack, ML/AI & Cloud Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Edigar Osoro Nyabuto — Software Engineer, Full-Stack Developer." />
+  <meta name="keywords" content="software engineer, full stack developer, portfolio, Nairobi" />
+  <meta name="author" content="Edigar Osoro Nyabuto" />
+  <meta property="og:title" content="Edigar Osoro Nyabuto | Portfolio" />
+  <meta property="og:description" content="Software Engineer & Full-Stack Developer" />
+  <meta property="og:type" content="website" />
+  <title>Edigar Osoro Nyabuto | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="logo">Edigar Osoro</div>
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="dark-mode-toggle" class="toggle-btn">🌙</button>
 
-  </header>
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">EON</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <p class="loader-text">Initializing System…</p>
+  </div>
+</div>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Edigar Osoro</h1>
-      <h2>Full-Stack, ML/AI & Cloud Engineer | Security Analyst | QA Tester</h2>
-      <p class="tagline">Engineering reliable apps, smarter AI, and cloud solutions with security at heart.</p>
-      <div class="buttons">
-        <a class="btn" href="projects.html">View Projects</a>
-        <a class="btn" href="assets/Edigar_Osoro_CV.pdf" download>Download Curriculum Vitae</a>
+<div id="cursor-dot"></div>
+<div id="cursor-outline"></div>
+
+<div id="topbar">
+  <div class="topbar-left">
+    <span><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
+    <a href="mailto:osoroedgar24@gmail.com"><i class="fas fa-envelope"></i> osoroedgar24@gmail.com</a>
+    <a href="tel:+254729475060"><i class="fas fa-phone"></i> +254 729 475 060</a>
+  </div>
+  <div class="topbar-right">
+    <a href="https://linkedin.com/in/eng-edigar" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/engosoro" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="assets/cv.pdf" download class="btn-cv"><i class="fas fa-download"></i> Download CV</a>
+  </div>
+</div>
+
+<nav id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="brand-initials">EON</span>
+      <span class="brand-name">Edigar Osoro Nyabuto</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li>
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="section hero-section">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-content reveal">
+    <div class="hero-badge"><span class="pulse-dot"></span> Available for Work</div>
+    <h1 class="hero-name">Edigar Osoro<br /><span class="accent">Nyabuto</span></h1>
+    <div class="hero-typing">
+      <span class="typing-prefix">I am a </span>
+      <span id="typingText" class="typing-word"></span><span class="typing-cursor">|</span>
+    </div>
+    <p class="hero-summary">
+      Entry-level Software Engineer with a First Class Honours degree, passionate about building
+      efficient and scalable applications. Proficient in full-stack development,
+      database management, and API integration.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+      <a href="#contact" class="btn btn-outline"><i class="fas fa-handshake"></i> Hire Me</a>
+      <a href="assets/Edigar_Osoro_CV.pdf" download class="btn btn-ghost"><i class="fas fa-download"></i> Resume</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/engosoro" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/eng-edigar/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal">
+    <div class="hero-img-wrap">
+      <div class="hero-img-ring"></div>
+      <img src="https://placehold.co/420x420/1a1a2e/00e5ff?text=EON" alt="Edigar Osoro Nyabuto" class="hero-img" loading="lazy" />
+      <div class="floating-badge fb1"><i class="fab fa-react"></i></div>
+      <div class="floating-badge fb2"><i class="fab fa-python"></i></div>
+      <div class="floating-badge fb3"><i class="fab fa-java"></i></div>
+      <div class="floating-badge fb4"><i class="fab fa-php"></i></div>
+    </div>
+  </div>
+
+  <div class="hero-stats reveal">
+    <div class="stat-card">
+      <span class="stat-num" data-target="6">0</span><span class="stat-unit">+</span>
+      <span class="stat-label">Projects</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" data-target="1">0</span><span class="stat-unit">yr</span>
+      <span class="stat-label">Experience</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" data-target="6">0</span><span class="stat-unit">+</span>
+      <span class="stat-label">Languages</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" data-target="1">0</span><span class="stat-unit"></span>
+      <span class="stat-label">Degree</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Who I Am</span>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-col reveal">
+        <div class="about-img-wrap">
+          <img src="assets/Edigar Osoro Passport Photo.jpg" alt="About Edigar" loading="lazy" />
+          <div class="about-exp-badge"><span>BSE</span> First Class Hons</div>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <p class="about-intro">Hello! I'm <strong>Edigar Osoro Nyabuto</strong>, a Software Engineer based in Nairobi, Kenya. I hold a First Class Honours degree in Software Engineering from Zetech University and I'm passionate about building applications that are efficient, well-structured, and impactful.</p>
+        <p>My foundation spans full-stack development, database management, and API integration. I'm eager to contribute to agile development teams, leveraging expertise in modern frameworks and software engineering best practices to drive real-world solutions.</p>
+        <p>I believe in writing clean, well-tested code — systems that are scalable and built to last.</p>
+        <div class="about-details">
+          <div class="detail-item"><span class="detail-label">Name</span><span>Edigar Osoro Nyabuto</span></div>
+          <div class="detail-item"><span class="detail-label">Nationality</span><span>Kenyan</span></div>
+          <div class="detail-item"><span class="detail-label">Location</span><span>Nairobi, Kenya</span></div>
+          <div class="detail-item"><span class="detail-label">Email</span><span>osoroedgar24@gmail.com</span></div>
+          <div class="detail-item"><span class="detail-label">Phone</span><span>+254 729 475 060</span></div>
+          <div class="detail-item"><span class="detail-label">Portfolio</span><span>project-ek39z.vercel.app</span></div>
+          <div class="detail-item"><span class="detail-label">Status</span><span class="status-open">Open to Work</span></div>
+        </div>
+        <div class="about-values">
+          <div class="value-card"><i class="fas fa-code"></i><span>Clean Code</span></div>
+          <div class="value-card"><i class="fas fa-bolt"></i><span>Performance</span></div>
+          <div class="value-card"><i class="fas fa-users"></i><span>Teamwork</span></div>
+          <div class="value-card"><i class="fas fa-lightbulb"></i><span>Innovation</span></div>
+        </div>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="assets/Edigar Osoro Passport Photo.jpg" alt="Edigar Osoro">
+
+    <!-- Career Timeline -->
+    <div class="about-timeline reveal">
+      <h3 class="subsection-title">Career <span class="accent">Journey</span></h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-year">Sep 2022</span>
+            <h4>Started BSc. Software Engineering</h4>
+            <p>Enrolled at Zetech University for a BSc. in Software Engineering, diving deep into programming, algorithms, databases, and systems design.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-year">2024</span>
+            <h4>Power Learn Project — 16-Week Certification</h4>
+            <p>Completed an intensive software development program covering Python, Web Technologies, Database Management, Startup Building, and Software Engineering Essentials.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-year">Jul 2025</span>
+            <h4>Software Engineer Attachee — The Judiciary ROK</h4>
+            <p>Gained hands-on IT and engineering experience supporting court systems, resolving hardware/software/network issues, and providing technical user support at Kiambu.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <span class="tl-year">Sep 2025</span>
+            <h4>First Class Honours Graduate</h4>
+            <p>Graduated from Zetech University with First Class Honours in Software Engineering. Ready to contribute to impactful engineering teams.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Edigar Osoro</p>
-    <p>Email: <a href="mailto:osoroedgar24@gmail.com">osoroedgar24@gmail.com</a> | Tel: +254729475060</p>
-    <p><a href="#">Book on Calendly</a></p>
-  </footer>
+    <!-- Fun Facts -->
+    <div class="fun-facts reveal">
+      <h3 class="subsection-title">Fun <span class="accent">Facts</span></h3>
+      <div class="facts-grid">
+        <div class="fact-card"><i class="fas fa-coffee"></i><strong>500+</strong><span>Cups of Coffee</span></div>
+        <div class="fact-card"><i class="fas fa-bug"></i><strong>1,000+</strong><span>Bugs Fixed</span></div>
+        <div class="fact-card"><i class="fab fa-git-alt"></i><strong>500+</strong><span>Git Commits</span></div>
+        <div class="fact-card"><i class="fas fa-book"></i><strong>50+</strong><span>Books & Articles Read</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- SKILLS -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Expertise</span>
+      <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-category reveal">
+        <div class="sk-cat-header"><i class="fas fa-laptop-code"></i> Frontend</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>HTML5 / CSS3</span><div class="bar"><div class="bar-fill" data-width="90"></div></div><span class="pct">90%</span></div>
+          <div class="skill-bar-item"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-width="85"></div></div><span class="pct">85%</span></div>
+          <div class="skill-bar-item"><span>React.js</span><div class="bar"><div class="bar-fill" data-width="82"></div></div><span class="pct">82%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="sk-cat-header"><i class="fas fa-server"></i> Backend</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Node.js</span><div class="bar"><div class="bar-fill" data-width="78"></div></div><span class="pct">82%</span></div>
+          <div class="skill-bar-item"><span>Python</span><div class="bar"><div class="bar-fill" data-width="75"></div></div><span class="pct">85%</span></div>
+          <div class="skill-bar-item"><span>PHP</span><div class="bar"><div class="bar-fill" data-width="88"></div></div><span class="pct">78%</span></div>
+          <div class="skill-bar-item"><span>Java</span><div class="bar"><div class="bar-fill" data-width="80"></div></div><span class="pct">80%</span></div>
+          <div class="skill-bar-item"><span>C++</span><div class="bar"><div class="bar-fill" data-width="83"></div></div><span class="pct">72%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="sk-cat-header"><i class="fas fa-database"></i> Databases</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>SQL (MySQL / PostgreSQL)</span><div class="bar"><div class="bar-fill" data-width="84"></div></div><span class="pct">84%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="sk-cat-header"><i class="fas fa-tools"></i> Dev Tools & Practices</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Git / GitHub</span><div class="bar"><div class="bar-fill" data-width="88"></div></div><span class="pct">88%</span></div>
+          <div class="skill-bar-item"><span>RESTful APIs</span><div class="bar"><div class="bar-fill" data-width="83"></div></div><span class="pct">83%</span></div>
+          <div class="skill-bar-item"><span>Agile Methodologies / JIRA</span><div class="bar"><div class="bar-fill" data-width="75"></div></div><span class="pct">75%</span></div>
+          <div class="skill-bar-item"><span>Unit Testing</span><div class="bar"><div class="bar-fill" data-width="72"></div></div><span class="pct">72%</span></div>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="sk-cat-header"><i class="fas fa-brain"></i> Problem Solving</div>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Data Structures & Algorithms</span><div class="bar"><div class="bar-fill" data-width="80"></div></div><span class="pct">80%</span></div>
+          <div class="skill-bar-item"><span>Debugging & Troubleshooting</span><div class="bar"><div class="bar-fill" data-width="85"></div></div><span class="pct">85%</span></div>
+          <div class="skill-bar-item"><span>Root Cause Analysis</span><div class="bar"><div class="bar-fill" data-width="78"></div></div><span class="pct">78%</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tech-stack reveal">
+      <h3 class="subsection-title">Tech <span class="accent">Stack</span></h3>
+      <div class="tech-icons">
+        <div class="tech-icon" title="HTML5"><i class="fab fa-html5"></i><span>HTML5</span></div>
+        <div class="tech-icon" title="CSS3"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="tech-icon" title="JavaScript"><i class="fab fa-js"></i><span>JS</span></div>
+        <div class="tech-icon" title="React"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="tech-icon" title="Node.js"><i class="fab fa-node-js"></i><span>Node</span></div>
+        <div class="tech-icon" title="Python"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="tech-icon" title="PHP"><i class="fab fa-php"></i><span>PHP</span></div>
+        <div class="tech-icon" title="Java"><i class="fab fa-java"></i><span>Java</span></div>
+        <div class="tech-icon" title="Git"><i class="fab fa-git-alt"></i><span>Git</span></div>
+        <div class="tech-icon" title="Database"><i class="fas fa-database"></i><span>SQL</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+    </div>
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Apps</button>
+      <button class="filter-btn" data-filter="ai">AI / ML</button>
+    </div>
+    <div class="project-search reveal">
+      <i class="fas fa-search"></i>
+      <input type="text" id="projectSearch" placeholder="Search projects…" />
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card reveal" data-category="web">
+        <div class="proj-img">
+          <img src="https://placehold.co/600x380/0d1117/00e5ff?text=Full-Stack+Web+App" alt="Full-Stack Web App" loading="lazy" />
+          <div class="proj-overlay">
+            <a href="https://github.com/engosoro" class="proj-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <button class="proj-btn proj-btn-detail" data-id="1"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+        <div class="proj-info">
+          <h3>Full-Stack Web Application</h3>
+          <p>A complete web application featuring user authentication, RESTful API integration, and a responsive frontend built with React and Node.js.</p>
+          <div class="proj-tags"><span>React</span><span>Node.js</span><span>SQL</span><span>REST API</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="ai">
+        <div class="proj-img">
+          <img src="https://placehold.co/600x380/0d1117/00e5ff?text=Python+AI+Tool" alt="Python AI Tool" loading="lazy" />
+          <div class="proj-overlay">
+            <a href="https://github.com/engosoro" class="proj-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <button class="proj-btn proj-btn-detail" data-id="2"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+        <div class="proj-info">
+          <h3>Python Automation & AI Tool</h3>
+          <p>A Python-based automation tool developed during the Power Learn Project, applying AI for Software Engineering principles and real-world scripting tasks.</p>
+          <div class="proj-tags"><span>Python</span><span>AI Concepts</span><span>Automation</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="web">
+        <div class="proj-img">
+          <img src="https://placehold.co/600x380/0d1117/00e5ff?text=PHP+Web+System" alt="PHP Web System" loading="lazy" />
+          <div class="proj-overlay">
+            <a href="https://github.com/engosoro" class="proj-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <button class="proj-btn proj-btn-detail" data-id="3"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+        <div class="proj-info">
+          <h3>PHP Web Management System</h3>
+          <p>A database-driven management system built with PHP and MySQL, featuring CRUD operations, user roles, and a clean admin interface.</p>
+          <div class="proj-tags"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span><span>JavaScript</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="web">
+        <div class="proj-img">
+          <img src="https://placehold.co/600x380/0d1117/00e5ff?text=Java+Application" alt="Java Application" loading="lazy" />
+          <div class="proj-overlay">
+            <a href="https://github.com/engosoro" class="proj-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+            <button class="proj-btn proj-btn-detail" data-id="5"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+        <div class="proj-info">
+          <h3>Java Desktop Application</h3>
+          <p>A Java-based desktop application demonstrating OOP principles, data structures, and algorithm implementation.</p>
+          <div class="proj-tags"><span>Java</span><span>OOP</span><span>Data Structures</span></div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-category="web">
+        <div class="proj-img">
+          <img src="https://placehold.co/600x380/0d1117/00e5ff?text=Portfolio+Site" alt="Portfolio Site" loading="lazy" />
+          <div class="proj-overlay">
+            <a href="https://project-ek39z.vercel.app" class="proj-btn proj-btn-live" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+            <button class="proj-btn proj-btn-detail" data-id="6"><i class="fas fa-info-circle"></i> Details</button>
+          </div>
+        </div>
+        <div class="proj-info">
+          <h3>Personal Portfolio Website</h3>
+          <p>This portfolio — a fully responsive, interactive website with particle canvas, dark/light theme toggle, animated sections, and a contact form. Deployed on Vercel.</p>
+          <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section services-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">What I Offer</span>
+      <h2 class="section-title">My <span class="accent">Services</span></h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Full-stack web applications built with React, Node.js, PHP, and SQL — optimized for performance and usability.</p>
+        <div class="svc-price">Let's Talk</div>
+        <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-database"></i></div>
+        <h3>Database Design</h3>
+        <p>Relational database design, optimization, and management using MySQL, PostgreSQL, and SQL best practices.</p>
+        <div class="svc-price">Let's Talk</div>
+        <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fab fa-python"></i></div>
+        <h3>Python & Automation</h3>
+        <p>Custom Python scripts, automation tools, and lightweight AI integrations to streamline your workflows.</p>
+        <div class="svc-price">Let's Talk</div>
+        <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-headset"></i></div>
+        <h3>IT Support & Troubleshooting</h3>
+        <p>Hardware, software, and network troubleshooting. System configuration, user support, and IT documentation.</p>
+        <div class="svc-price">Let's Talk</div>
+        <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><i class="fas fa-plug"></i></div>
+        <h3>API Integration</h3>
+        <p>RESTful API design, integration, and testing — connecting your apps with third-party services and platforms.</p>
+        <div class="svc-price">Let's Talk</div>
+        <a href="#contact" class="btn btn-outline btn-sm">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section experience-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Work History</span>
+      <h2 class="section-title">Professional <span class="accent">Experience</span></h2>
+    </div>
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-dot"><i class="fas fa-briefcase"></i></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div>
+              <h3>Software Engineer Attachee</h3>
+              <span class="exp-company">The Judiciary ROK · Kiambu, Kenya</span>
+            </div>
+            <span class="exp-period">Jul 2025 – Sep 2025</span>
+          </div>
+          <ul class="exp-duties">
+            <li>Troubleshot and resolved hardware, software, and network issues across court systems.</li>
+            <li>Installed, configured, and updated computer systems and applications.</li>
+            <li>Provided user support and documented IT procedures and workflows.</li>
+            <li>Monitored networks to maintain efficiency and uptime.</li>
+            <li>Used help desk ticketing tools to track, prioritise, and resolve incidents.</li>
+          </ul>
+          <div class="exp-tags"><span>IT Support</span><span>Networking</span><span>Troubleshooting</span><span>Help Desk</span><span>Documentation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section education-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Academic Background</span>
+      <h2 class="section-title">My <span class="accent">Education</span></h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-content">
+          <span class="edu-year">Sep 2022 – Sep 2025</span>
+          <h3>BSc. Software Engineering</h3>
+          <span class="edu-inst">Zetech University · Kiambu, Kenya</span>
+          <p>Graduated with First Class Honours. Covered full-stack development, database systems, software engineering essentials, and modern development practices.</p>
+          <div class="edu-tags"><span>First Class Honours</span><span>Software Engineering</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section certs-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Credentials</span>
+      <h2 class="section-title">Certifications & <span class="accent">Credentials</span></h2>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal">
+        <div class="cert-badge"><i class="fas fa-laptop-code"></i></div>
+        <h4>Software Development & AI for Software Engineering</h4>
+        <p>Power Learn Project · 16-Week Intensive Program</p>
+        <p style="font-size:0.82rem;opacity:0.75;margin-top:6px;">
+          Covered Python, Web Technologies, Database Management, Startup Building &amp; Employability, and Software Engineering Essentials.
+        </p>
+        <span class="cert-year">2024</span>
+      </div>
+      <div class="cert-card reveal" style="opacity:0.6;border-style:dashed;">
+        <div class="cert-badge"><i class="fas fa-hourglass-half"></i></div>
+        <h4>More Certifications In Progress</h4>
+        <p>Actively working towards more advanced development certifications.</p>
+        <span class="cert-year">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <h3>Let's Build Something <span class="accent">Amazing</span></h3>
+        <p>Whether you have a project in mind, a collaboration opportunity, or just want to say hello — my inbox is always open.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div><strong>Location</strong><span>Nairobi, Kenya</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+            <div><strong>Email</strong><span>osoroedgar24@gmail.com</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-phone"></i></div>
+            <div><strong>Phone</strong><span>+254 729 475 060</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fab fa-linkedin"></i></div>
+            <div><strong>LinkedIn</strong><span>linkedin.com/in/eng-edigar</span></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><i class="fas fa-clock"></i></div>
+            <div><strong>Availability</strong><span class="status-open">Open to Work</span></div>
+          </div>
+        </div>
+        <div class="contact-socials">
+          <a href="https://linkedin.com/in/eng-edigar" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/engosoro" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="map-placeholder">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>Nairobi, Kenya</span>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span>*</span></label>
+              <input type="text" name="name" id="fname" placeholder="John Doe" required />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label>Email <span>*</span></label>
+              <input type="email" name="email" id="femail" placeholder="john@email.com" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="+254 700 000 000" />
+            </div>
+            <div class="form-group">
+              <label>Subject <span>*</span></label>
+              <input type="text" name="subject" id="fsubject" placeholder="Project Discussion" required />
+              <span class="form-error" id="subjectError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Message <span>*</span></label>
+            <textarea name="message" id="fmessage" rows="5" placeholder="Tell me about your project…" required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span class="btn-text">Send Message <i class="fas fa-paper-plane"></i></span>
+            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending…</span>
+          </button>
+          <div id="formSuccess" class="form-success" style="display:none;">
+            <i class="fas fa-check-circle"></i> Message sent successfully! I'll respond within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-main">
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">EON</div>
+      <p>Software Engineer passionate about building efficient, scalable applications that make a difference.</p>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/eng-edigar" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/engosoro" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Web Development</a></li>
+        <li><a href="#services">Python & Automation</a></li>
+        <li><a href="#services">Database Design</a></li>
+        <li><a href="#services">IT Support</a></li>
+        <li><a href="#services">API Integration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Get In Touch</h4>
+      <p>Open to full-time roles, internships, and freelance projects.</p>
+      <a href="mailto:osoroedgar24@gmail.com" class="btn btn-primary btn-sm" style="margin-top:0.75rem;">
+        <i class="fas fa-envelope"></i> Email Me
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Edigar Osoro Nyabuto. Created with <span class="accent">❤</span> by <strong>Edigar Osoro Nyabuto</strong></p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-
